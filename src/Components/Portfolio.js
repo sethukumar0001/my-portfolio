@@ -86,6 +86,7 @@ class Portfolio extends Component {
 						<a
 							href={projects.url}
 							target="_blank"
+              rel="noreferrer"
 							style={{ textAlign: "center" }}
 						>
 							{projects.title}

@@ -44,6 +44,7 @@ class About extends Component {
 											href={`/sethukumar.pdf`}
 											className="button"
 											target={"_blank"}
+                      rel="noreferrer"
 										>
 											<i className="fa fa-download"></i>Download Resume
 										</a>
