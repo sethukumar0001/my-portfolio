@@ -48,9 +48,9 @@ class Footer extends Component {
 								<li>&copy; Copyright 2022</li>
 								<li>
 									Design by{" "}
-									<a title="Styleshout" href="#">
+									<p title="Styleshout">
 										T Sethu Kumar
-									</a>
+									</p>
 								</li>
 							</ul>
 						</div>
