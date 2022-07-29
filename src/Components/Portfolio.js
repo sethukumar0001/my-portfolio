@@ -4,41 +4,116 @@ import Fade from "react-reveal";
 
 let id = 0;
 class Portfolio extends Component {
-  render() {
-    if (!this.props.data) return null;
+	state = {
+		projects: [
+			{
+				title: "Legit Blinds",
+				image: "01.jpg",
+				url: "https://storefront-dev.legitblinds.com/",
+			},
+			{
+				title: "Healthtunnel",
+				image: "02.jpg",
+				url: "https://www.healthtunnel.com/",
+			},
+			{
+				title: "Jobcards",
+				image: "03.jpg",
+				url: "https://explore.jobcards.in/",
+			},
 
-    const projects = this.props.data.projects.map(function (projects) {
-      let projectImage = "images/portfolio/" + projects.image;
+			{
+				title: "Clinn",
+				image: "05.jpg",
+				url: "https://clinn-frontend.vercel.app",
+			},
+			{
+				title: "Clinn Admin",
+				image: "06.jpg",
+				url: "https://clinn-admin-frontend.vercel.app",
+			},
+			{
+				title: "Flying Carpet",
+				image: "07.jpg",
+				url: "https://www.companydomainid.com/",
+			},
+			{
+				title: "Flying Carpet Admin",
+				image: "13.jpg",
+				url: "https://admin.companydomainid.com/login",
+			},
+			{
+				title: "Carin",
+				image: "09.jpg",
+				url: "https://carin-ui.vercel.app/signin",
+			},
 
-      return (
-        <div key={id++} className="columns portfolio-item">
-          <div className="item-wrap">
-            <Zmage alt={projects.title} src={projectImage} />
-            <div style={{ textAlign: "center" }}>{projects.title}</div>
-          </div>
-        </div>
-      );
-    });
+			{
+				title: "Survey",
+				image: "08.jpg",
+				url: "https://surveydemolink.in/",
+			},
+			{
+				title: "Rebyuu.com",
+				image: "04.jpg",
+				url: "https://rebyuu-frontend.vercel.app/",
+			},
+			{
+				title: "Curio",
+				image: "10.jpg",
+				url: "https://sandbox.curiotechnologies.com/login",
+			},
+			// {
+			// 	title: "Mad Over Dreams",
+			// 	image: "05.jpg",
+			// 	url: "https://madoverdreams.com/",
+			// },
+			{
+				title: "Tajaroob",
+				image: "12.jpg",
+				url: "https://tajaroob.vercel.app/",
+			},
+		],
+	};
+	render() {
+		const projects = this.state.projects.map(function (projects) {
+			let projectImage = "images/portfolio/" + projects.image;
 
-    return (
-      <section id="portfolio">
-        <Fade left duration={1000} distance="40px">
-          <div className="row">
-            <div className="twelve columns collapsed">
-              <h1>Check Out Some of My Works.</h1>
+			return (
+				<div key={id++} className="columns portfolio-item">
+					<div className="item-wrap">
+						<Zmage alt={projects.title} src={projectImage} />
+						<a
+							href={projects.url}
+							target="_blank"
+							style={{ textAlign: "center" }}
+						>
+							{projects.title}
+						</a>
+					</div>
+				</div>
+			);
+		});
 
-              <div
-                id="portfolio-wrapper"
-                className="bgrid-quarters s-bgrid-thirds cf"
-              >
-                {projects}
-              </div>
-            </div>
-          </div>
-        </Fade>
-      </section>
-    );
-  }
+		return (
+			<section id="portfolio">
+				<Fade left duration={1000} distance="40px">
+					<div className="row">
+						<div className="twelve columns collapsed">
+							<h1>Check Out Some of My Works.</h1>
+
+							<div
+								id="portfolio-wrapper"
+								className="bgrid-quarters s-bgrid-thirds cf"
+							>
+								{projects}
+							</div>
+						</div>
+					</div>
+				</Fade>
+			</section>
+		);
+	}
 }
 
 export default Portfolio;
