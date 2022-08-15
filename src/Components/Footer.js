@@ -47,7 +47,7 @@ class Footer extends Component {
 							<ul className="copyright">
 								<li>&copy; Copyright 2022</li>
 								<li>
-									Design by{" "}
+									{/* Design by{" "} */}
 									<p title="Styleshout">
 										T Sethu Kumar
 									</p>

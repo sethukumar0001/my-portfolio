@@ -7,20 +7,20 @@ class Contact extends Component {
       <section id="contact">
         <Fade bottom duration={1000}>
           <div className="row section-head">
-            <div className="two columns header-col">
+            {/* <div className="two columns header-col">
               <h1>
                 <span>Get In Touch.</span>
               </h1>
-            </div>
+            </div> */}
 
-            <div className="ten columns">
+            {/* <div className="ten columns">
               <p className="lead">{'Get In Touch'}</p>
-            </div>
+            </div> */}
           </div>
         </Fade>
 
         <div className="row">
-          <Slide left duration={1000}>
+          {/* <Slide left duration={1000}>
             <div className="eight columns">
               <form action="" method="post" id="contactForm" name="contactForm">
                 <fieldset>
@@ -91,7 +91,7 @@ class Contact extends Component {
                 <br />
               </div>
             </div>
-          </Slide>
+          </Slide> */}
 
           <Slide right duration={1000}>
             <aside className="four columns footer-widgets">
@@ -100,8 +100,8 @@ class Contact extends Component {
                 <p className="address">
                   T Sethu Kumar
                   <br />
-                  Tiruchanoor <br />
-                  Tirupati, Andhra Pradesh 517503
+                  Tirupati, 517503 <br />
+                   Andhra Pradesh, India
                   <br />
                   <span>+918886257181</span>
                 </p>
