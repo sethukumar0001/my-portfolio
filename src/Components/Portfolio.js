@@ -74,6 +74,13 @@ class Portfolio extends Component {
 				url: "https://tajaroob.vercel.app/",
 			},
 		],
+		mobile_projects:[
+			{
+				title: "Audit Tool",
+				image: "14.jpg",
+				url: "https://play.google.com/store/apps/details?id=com.audit_tool",
+			},
+		]
 	};
 	render() {
 		const projects = this.state.projects.map(function (projects) {
@@ -95,19 +102,51 @@ class Portfolio extends Component {
 				</div>
 			);
 		});
+		const mobile_projects = this.state.mobile_projects.map(function (projects) {
+			let projectImage = "images/portfolio/" + projects.image;
 
+			return (
+				<div key={id++} className="columns portfolio-item">
+					<div className="item-wrap">
+						<Zmage alt={projects.title} src={projectImage} />
+						<a
+							href={projects.url}
+							target="_blank"
+             				rel="noreferrer"
+							style={{ textAlign: "center" }}
+						>
+							{projects.title}
+						</a>
+					</div>
+				</div>
+			);
+		});
 		return (
 			<section id="portfolio">
 				<Fade left duration={1000} distance="40px">
 					<div className="row">
 						<div className="twelve columns collapsed">
-							<h1>Check Out Some of My Works.</h1>
+							<h1>Check Out Some of My Works In Web Development (React JS)</h1>
 
 							<div
 								id="portfolio-wrapper"
 								className="bgrid-quarters s-bgrid-thirds cf"
 							>
 								{projects}
+							</div>
+						</div>
+					</div>
+				</Fade>
+				<Fade left duration={1000} distance="40px">
+					<div className="row">
+						<div className="twelve columns collapsed">
+							<h1>Check Out Some of My Works In Mobile Development (React Native)</h1>
+
+							<div
+								id="portfolio-wrapper"
+								className="bgrid-quarters s-bgrid-thirds cf"
+							>
+								{mobile_projects}
 							</div>
 						</div>
 					</div>
