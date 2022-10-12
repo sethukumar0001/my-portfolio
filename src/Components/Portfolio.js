@@ -35,12 +35,12 @@ class Portfolio extends Component {
 			{
 				title: "Flying Carpet",
 				image: "07.jpg",
-				url: "https://www.companydomainid.com/",
+				url: "https://prd.flyingcarpet.travel/",
 			},
 			{
 				title: "Flying Carpet Admin",
 				image: "13.jpg",
-				url: "https://admin.companydomainid.com/login",
+				url: "https://admin.flyingcarpet.travel/",
 			},
 			{
 				title: "Carin",
